@@ -1,0 +1,61 @@
+@import "tailwindcss";
+@variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: #fdfbf7; /* Warm white/cream for light mode */
+  --foreground: #171717;
+  
+  /* Glassmorphism variables */
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --glass-blur: 12px;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-bg: rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* Custom Glassmorphism Utilities */
+@utility glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  /* Add a subtle gradient background to make glass effect visible */
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(var(--color-indigo-500), 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(var(--color-fuchsia-500), 0.15) 0px, transparent 50%);
+  background-attachment: fixed;
+}
+
+/* Dark mode specific overrides handled by next-themes usually via class="dark" */
+/* We need to ensure the variables update when .dark class is present */
+/* Since Tailwind v4 handles dark mode bit differently, let's add the standard .dark selector support */
+
+@layer base {
+  :root[class="dark"] {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --glass-bg: rgba(0, 0, 0, 0.3);
+  }
+}

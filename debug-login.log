@@ -1,0 +1,14 @@
+[2026-02-13T09:03:12.112Z] Fallback verification also failed: Public endpoint failed: Invalid Value
+[2026-02-13T09:07:23.908Z] Fallback verification also failed: Public endpoint failed: Invalid Value
+[2026-02-13T09:30:46.902Z] Received Token: eyJhbGciOi...(1152 chars)
+[2026-02-13T09:30:46.902Z] Firebase Admin verify failed: Cannot read properties of null (reading 'verifyIdToken')
+[2026-02-13T09:30:47.258Z] Fallback verification also failed: Public endpoint failed: Invalid Value
+[2026-02-13T09:49:56.881Z] Received Token: eyJhbGciOi...(1152 chars)
+[2026-02-13T09:49:56.881Z] Firebase Admin verify failed: Cannot read properties of null (reading 'verifyIdToken')
+[2026-02-13T09:49:57.259Z] Manual Decode Success: tibi.father@gmail.com
+[2026-02-13T12:50:44.652Z] Received Token: eyJhbGciOi...(1168 chars)
+[2026-02-13T12:50:44.652Z] Firebase Admin verify failed: Firebase Admin not initialized
+[2026-02-13T12:50:44.893Z] Manual Decode Success: dlightplayroom@gmail.com
+[2026-02-13T12:51:06.617Z] Received Token: eyJhbGciOi...(1152 chars)
+[2026-02-13T12:51:06.617Z] Firebase Admin verify failed: Firebase Admin not initialized
+[2026-02-13T12:51:06.797Z] Manual Decode Success: tibi.father@gmail.com
